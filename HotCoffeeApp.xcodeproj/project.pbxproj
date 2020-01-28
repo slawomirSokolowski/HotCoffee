@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18222C6A23E0B3770017AB51 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18222C6923E0B3770017AB51 /* CoreDataManager.swift */; };
 		18222C6D23E0B55C0017AB51 /* NSManagedObjectContext+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18222C6C23E0B55C0017AB51 /* NSManagedObjectContext+Extentions.swift */; };
+		18222C7023E0BDAD0017AB51 /* AddOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18222C6F23E0BDAD0017AB51 /* AddOrderViewModel.swift */; };
+		18222C7323E0BE650017AB51 /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18222C7223E0BE650017AB51 /* AddOrderView.swift */; };
 		185624F723E090B8004FDD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185624F623E090B8004FDD7D /* AppDelegate.swift */; };
 		185624F923E090B8004FDD7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185624F823E090B8004FDD7D /* SceneDelegate.swift */; };
 		185624FC23E090B8004FDD7D /* HotCoffeeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 185624FA23E090B8004FDD7D /* HotCoffeeApp.xcdatamodeld */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		18222C6923E0B3770017AB51 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18222C6C23E0B55C0017AB51 /* NSManagedObjectContext+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extentions.swift"; sourceTree = "<group>"; };
+		18222C6F23E0BDAD0017AB51 /* AddOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewModel.swift; sourceTree = "<group>"; };
+		18222C7223E0BE650017AB51 /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
 		185624F323E090B8004FDD7D /* HotCoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185624F623E090B8004FDD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185624F823E090B8004FDD7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		18222C6E23E0BD870017AB51 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				18222C6F23E0BDAD0017AB51 /* AddOrderViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		18222C7123E0BE400017AB51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				185624FD23E090B8004FDD7D /* ContentView.swift */,
+				18222C7223E0BE650017AB51 /* AddOrderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		185624EA23E090B8004FDD7D = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +99,12 @@
 		185624F523E090B8004FDD7D /* HotCoffeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				18222C7123E0BE400017AB51 /* Views */,
+				18222C6E23E0BD870017AB51 /* View Models */,
 				18222C6B23E0B52B0017AB51 /* Extensions */,
 				18222C6823E0B35A0017AB51 /* Managers */,
 				185624F623E090B8004FDD7D /* AppDelegate.swift */,
 				185624F823E090B8004FDD7D /* SceneDelegate.swift */,
-				185624FD23E090B8004FDD7D /* ContentView.swift */,
 				185624FF23E090BA004FDD7D /* Assets.xcassets */,
 				1856250423E090BA004FDD7D /* LaunchScreen.storyboard */,
 				1856250723E090BA004FDD7D /* Info.plist */,
@@ -176,6 +198,8 @@
 				185624FC23E090B8004FDD7D /* HotCoffeeApp.xcdatamodeld in Sources */,
 				185624FE23E090B8004FDD7D /* ContentView.swift in Sources */,
 				18222C6A23E0B3770017AB51 /* CoreDataManager.swift in Sources */,
+				18222C7323E0BE650017AB51 /* AddOrderView.swift in Sources */,
+				18222C7023E0BDAD0017AB51 /* AddOrderViewModel.swift in Sources */,
 				185624F923E090B8004FDD7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

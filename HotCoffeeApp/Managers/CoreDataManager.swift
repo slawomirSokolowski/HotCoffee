@@ -19,4 +19,16 @@ class CoreDataManager {
         self.moc = moc
     }
     
+    func saveOrder(name: String, type: String)  {
+        let order = Order(context: self.moc)
+        order.name = name
+        order.type = type
+        
+        do {
+            try self.moc.save()
+        } catch let error as NSError {
+            print("error")
+        }
+    }
+    
 }
