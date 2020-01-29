@@ -13,20 +13,22 @@ import Combine
 
 class OrderListViewModel: ObservableObject {
     
-    var orders = [OrderListViewModel]()
+    @Published
+    var orders = [OrderViewModel]()
     
     init() {
         fetchAllOrders()
-        
     }
     
     func fetchAllOrders() {
         self.orders = CoreDataManager.shared.getAllOrders().map(OrderViewModel.init)
+        
         print(self.orders)
     }
 }
 
 class OrderViewModel {
+    
     
     var name = ""
     var type = ""
