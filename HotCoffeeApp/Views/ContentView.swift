@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var orderListVM = OrderListViewModel()
+    @State private var isPresented: Bool = false
     
     init() {
         self.orderListVM = OrderListViewModel()
@@ -28,13 +29,21 @@ struct ContentView: View {
                     Text(order.name)
                         .font(.largeTitle)
                         .padding([.leading], 10)
-                    
-                    
                 }
             }
         }
+        .sheet(isPresented: $isPresented, onDismiss:  {
+            self.orderListVM.fetchAllOrders()
+            
+        }, content: {
+            AddOrderView(isPresented: self.$isPresented)
+            
+        })
             .navigationBarTitle("Orders")
-            .navigationBarItems(trailing: Button("Add New Order") {})
+            .navigationBarItems(trailing: Button("Add New Order") {
+                self.isPresented = true
+            })
+            
         }
       
     }
